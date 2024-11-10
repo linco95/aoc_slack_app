@@ -1,5 +1,6 @@
 import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
 import { SampleFunctionDefinition } from "../functions/sample_function.ts";
+import { callback_ids, CallbackIds } from "../common/callback_ids.ts";
 
 /**
  * A workflow is a set of steps that are executed in order.
@@ -10,9 +11,9 @@ import { SampleFunctionDefinition } from "../functions/sample_function.ts";
  * https://api.slack.com/automation/forms#add-interactivity
  */
 const SampleWorkflow = DefineWorkflow({
-  callback_id: "sample_workflow",
-  title: "Sample workflow",
-  description: "A sample workflow",
+  callback_id: "sample_workflow" satisfies CallbackIds,
+  title: callback_ids.sample_workflow.title,
+  description: callback_ids.sample_workflow.description,
   input_parameters: {
     properties: {
       interactivity: {
