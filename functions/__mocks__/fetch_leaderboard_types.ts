@@ -1,13 +1,18 @@
+import { IntRange, RequireAtLeastOne } from '@/types/utils.ts'
+
 export type AocCompletionDayLevel = {
     get_star_ts: number
     star_index: number
 }
-// { <day>: { <part>: { get_star_ts: number, star_index: number } } }
-// { '1': { '1': { get_star_ts: number, star_index: number }, '2': { get_star_ts: number, star_index: number } } }
-export type AocCompletionDayLevels = Record<string, Record<string, AocCompletionDayLevel>>
+
+type DayType<T> = { [Day in IntRange<1, 26>]?: T }
+
+type PartType<T> = RequireAtLeastOne<{ [Part in '1' | '2']: T }>
+
+export type AocCompletionDayLevels = DayType<PartType<AocCompletionDayLevel>>
 export type AocMember = {
     last_star_ts: number
-    name: string
+    name?: string
     stars: number
     id: number
     global_score: number
