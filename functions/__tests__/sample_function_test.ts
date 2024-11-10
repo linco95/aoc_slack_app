@@ -1,6 +1,6 @@
 import { SlackFunctionTester } from 'deno-slack-sdk/mod.ts'
 import { assertEquals, assertExists, assertStringIncludes } from 'std/assert/mod.ts'
-import SampleFunction from './sample_function.ts'
+import SampleFunction from '../sample_function.ts'
 import * as mf from 'mock-fetch/mod.ts'
 
 const { createContext } = SlackFunctionTester('sample_function')
