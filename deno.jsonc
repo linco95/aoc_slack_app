@@ -12,10 +12,10 @@
       "views",
       "workflows"
     ],
-      "semiColons": false,
-      "lineWidth": 120,
+    "semiColons": false,
+    "lineWidth": 120,
     "indentWidth": 4,
-      "singleQuote": true
+    "singleQuote": true
   },
   "importMap": "import_map.json",
   "lint": {
@@ -32,7 +32,7 @@
   },
   "lock": false,
   "tasks": {
-    "test": "deno fmt --check && deno lint && deno test --allow-read --allow-none",
-    "test-watch": "deno test --watch --allow-read --allow-none"
+    "test": "deno fmt --check && deno lint && deno test --allow-read --allow-import",
+    "test:w": "deno test --allow-import --watch"
   }
 }
