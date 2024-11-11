@@ -4,7 +4,7 @@ export type Leaderboard = {
     year: number
     members: Record<string, Member>
     owner_id: number
-    timestamp: number
+    fetchTimestamp: number
 }
 
 export type Member = {

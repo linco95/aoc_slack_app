@@ -1,7 +1,8 @@
 import { Manifest } from 'deno-slack-sdk/mod.ts'
 import SampleWorkflow from './workflows/sample_workflow.ts'
 import SampleObjectDatastore from './datastores/sample_datastore.ts'
-
+import { PollLeaderboardFunctionDefinition } from './functions/poll_leaderboard_function.ts'
+import { SampleFunctionDefinition } from '@/functions/sample_function.ts'
 /**
  * The app manifest contains the app's configuration. This
  * file defines attributes like app name and description.
@@ -13,6 +14,7 @@ export default Manifest({
     icon: 'assets/default_new_app_icon.png',
     workflows: [SampleWorkflow],
     outgoingDomains: [],
+    functions: [PollLeaderboardFunctionDefinition, SampleFunctionDefinition],
     datastores: [SampleObjectDatastore],
     botScopes: [
         'commands',

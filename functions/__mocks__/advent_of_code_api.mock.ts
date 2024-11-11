@@ -60,22 +60,22 @@ curl 'https://adventofcode.com/<<<year>>>/leaderboard/private/view/<<<leaderboar
 */
 
 import { MockFetch } from 'mock-fetch/mod.ts'
+import { AocResponseData } from './fetch_leaderboard_types.ts'
 
 export type AocFetchParams = {
-    year: number
-    session: string
-    leaderboard: string
+  year: number
+  leaderboard: string
 }
 
-export type AocResponse = AocFetchParams
-
-export const mock_aoc_fetch = (mock: MockFetch['mock']) => (params: AocFetchParams, response: AocResponse): void => {
+const baseUrl = 'https://adventofcode.com'
+export const mock_aoc_fetch =
+  (mock: MockFetch['mock']) => ({ year, leaderboard }: AocFetchParams, response: AocResponseData): void => {
     mock(
-        `GET@https://adventofcode.com/${params.year}/leaderboard/private/view/${params.leaderboard}.json`,
-        (_req) => {
-            return new Response(JSON.stringify(response), {
-                status: 200,
-            })
-        },
+      `GET@${baseUrl}/${year}/leaderboard/private/view/${leaderboard}.json`,
+      () => {
+        return new Response(JSON.stringify(response), {
+          status: 200,
+        })
+      },
     )
-}
+  }

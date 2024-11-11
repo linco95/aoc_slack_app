@@ -42,6 +42,7 @@ const PollLeaderboardWorkflow = DefineWorkflow({
 Steps:
 - Get current leaderboard
 - Poll(?) leaderboard
+- Persist updated(?) leaderboard
 - Generate diff message
 - Post to channel
 */
