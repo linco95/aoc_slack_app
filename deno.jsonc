@@ -33,6 +33,7 @@
   "lock": true,
   "tasks": {
     "test": "deno test --allow-import=crux.land,deno.land",
-    "test:w": "deno task test --watch"
+    "test:w": "deno task test --watch",
+    "coverage": "deno task test --coverage=coverage/"
   }
 }

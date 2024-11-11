@@ -4,3 +4,4 @@ package
 .slack/apps.dev.json
 .env
 .vscode
+coverage/
