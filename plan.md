@@ -46,7 +46,9 @@ A bot to fetch advent of code information, and share it in slack.
   - Post to reddit - get installed in > 10 active workspaces
 - [AoC Automation guidlines](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/)
 - Map of AoC username -> slack user
-- Store input in datastore, and 
+- Store input in datastore, and use that to configure trigger? 
+- Support for multiple leaderboard updates?
+- Add coveralls
 
 ## Example payload
 Request:
