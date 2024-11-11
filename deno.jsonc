@@ -30,7 +30,7 @@
       "workflows"
     ]
   },
-  "lock": false,
+  "lock": true,
   "tasks": {
     "test": "deno test --allow-import=crux.land,deno.land",
     "test:w": "deno task test --watch"
