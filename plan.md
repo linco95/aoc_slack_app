@@ -30,7 +30,7 @@ A bot to fetch advent of code information, and share it in slack.
 - Add Collaborators.md
 - Add to private slack workspace for testing
 - Msg "owner" when session token is about to expire/expired
-- Try to use [ts-doctest](https://github.com/danr/doctest-ts)
+- ~~Try to use [ts-doctest](https://github.com/danr/doctest-ts)~~ Use deno doctest instead
 - Update ts config with strict settings
 - Add codescene integration OSS
 - Set up branch protection - Signed commits
