@@ -67,12 +67,12 @@ export type AocFetchParams = {
     leaderboard: string
 }
 
-export type AocResponse = {}
+export type AocResponse = AocFetchParams
 
 export const mock_aoc_fetch = (mock: MockFetch['mock']) => (params: AocFetchParams, response: AocResponse): void => {
     mock(
         `GET@https://adventofcode.com/${params.year}/leaderboard/private/view/${params.leaderboard}.json`,
-        async (req) => {
+        (_req) => {
             return new Response(JSON.stringify(response), {
                 status: 200,
             })
