@@ -32,7 +32,7 @@
   },
   "lock": false,
   "tasks": {
-    "test": "deno fmt --check && deno lint && deno test --allow-read --allow-import",
-    "test:w": "deno test --allow-import --watch"
+    "test": "deno test --allow-import=crux.land,deno.land",
+    "test:w": "deno task test --watch"
   }
 }
