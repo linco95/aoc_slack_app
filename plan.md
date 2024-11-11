@@ -25,12 +25,12 @@ A bot to fetch advent of code information, and share it in slack.
 - Mock fetching during testing/development
 - Share in Kodsnack slack
 - Add bot to Kodsnack slack
-- Add License.md
+- ~~Add License.md~~
 - Add Sponsor.md
 - Add Collaborators.md
 - Add to private slack workspace for testing
 - Msg "owner" when session token is about to expire/expired
-- Try to use [ts-doctest](https://github.com/danr/doctest-ts)
+- ~~Try to use [ts-doctest](https://github.com/danr/doctest-ts)~~ Use deno doctest instead
 - Update ts config with strict settings
 - Add codescene integration OSS
 - Set up branch protection - Signed commits
@@ -45,6 +45,10 @@ A bot to fetch advent of code information, and share it in slack.
 - [Deploy app to slack marketplace](https://api.slack.com/slack-marketplace/using)
   - Post to reddit - get installed in > 10 active workspaces
 - [AoC Automation guidlines](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/)
+- Map of AoC username -> slack user
+- Store input in datastore, and use that to configure trigger? 
+- Support for multiple leaderboard updates?
+- Add coveralls
 
 ## Example payload
 Request:

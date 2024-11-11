@@ -11,7 +11,11 @@
       "types",
       "views",
       "workflows"
-    ]
+    ],
+    "semiColons": false,
+    "lineWidth": 120,
+    "indentWidth": 4,
+    "singleQuote": true
   },
   "importMap": "import_map.json",
   "lint": {
@@ -26,9 +30,10 @@
       "workflows"
     ]
   },
-  "lock": false,
+  "lock": true,
   "tasks": {
-    "test": "deno fmt --check && deno lint && deno test --allow-read --allow-none",
-    "test-watch": "deno test --watch --allow-read --allow-none"
+    "test": "deno test --allow-import=crux.land,deno.land",
+    "test:w": "deno task test --watch",
+    "coverage": "deno task test --coverage=coverage/"
   }
 }
